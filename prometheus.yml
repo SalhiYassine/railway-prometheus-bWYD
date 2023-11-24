@@ -10,6 +10,21 @@ scrape_configs:
     static_configs:
       - targets: ['scraper.railway.internal'] 
 
+  - job_name: 'scraper1'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['scraper.railway.internal:5007'] 
+
+  - job_name: 'scraper2'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['scraper:5007'] 
+
+  - job_name: 'scraper3'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['scraper'] 
+
   - job_name: 'public-scraper'
     scrape_interval: 5s
     static_configs:
